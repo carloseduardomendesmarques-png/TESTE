@@ -2,6 +2,11 @@
 
 Repositório para estudar programação.
 
+| Projeto | Pasta / arquivos |
+|---|---|
+| Calculadora ACR TI-RADS | `tirads.py`, `app.py` |
+| Diagnóstico diferencial em TC de tórax | [`ddx_torax/`](ddx_torax/README.md) |
+
 ## Calculadora ACR TI-RADS
 
 Calculadora de linha de comando em Python que classifica nódulos de tireoide
