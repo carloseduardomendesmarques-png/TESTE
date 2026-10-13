@@ -20,6 +20,7 @@ python tirads.py
 
 O programa pergunta composição, ecogenicidade, forma, margem, focos ecogênicos
 e o maior diâmetro do nódulo, e então mostra a pontuação, o nível TR e a conduta.
+Ao final, pergunta se você deseja avaliar outro nódulo.
 
 ### Como rodar os testes
 
