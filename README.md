@@ -22,6 +22,18 @@ O programa pergunta composição, ecogenicidade, forma, margem, focos ecogênico
 e o maior diâmetro do nódulo, e então mostra a pontuação, o nível TR e a conduta.
 Ao final, pergunta se você deseja avaliar outro nódulo.
 
+### Versão web
+
+A versão web (`app.py`) usa as mesmas regras do `tirads.py`, com botões e
+resultado atualizado na hora. Para rodar no computador:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+O navegador abre sozinho em `http://localhost:8501`.
+
 ### Como rodar os testes
 
 ```bash
