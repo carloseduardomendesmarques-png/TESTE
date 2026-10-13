@@ -156,12 +156,19 @@ def perguntar_tamanho():
         print("O tamanho precisa ser maior que zero.")
 
 
-def main():
-    print("=" * 50)
-    print("  Calculadora ACR TI-RADS")
-    print("  (uso educacional - não substitui avaliação médica)")
-    print("=" * 50)
+def perguntar_sim_nao(pergunta):
+    """Repete a pergunta até receber 's' (sim) ou 'n' (não). Retorna True ou False."""
+    while True:
+        resposta = input(pergunta).strip().lower()
+        if resposta in ("s", "sim"):
+            return True
+        if resposta in ("n", "nao", "não"):
+            return False
+        print("Responda com s ou n.")
 
+
+def avaliar_nodulo():
+    """Faz as perguntas de um nódulo e mostra o resultado."""
     composicao = perguntar_opcao("Composição:", COMPOSICAO)
 
     if composicao == 2:
@@ -184,6 +191,24 @@ def main():
     print(f"Classificação:   {DESCRICAO_TR[tr]}")
     print(f"Conduta:         {recomendar(tr, tamanho)}")
     print("-" * 50)
+
+
+def main():
+    print("=" * 50)
+    print("  Calculadora ACR TI-RADS")
+    print("  (uso educacional - não substitui avaliação médica)")
+    print("=" * 50)
+
+    numero = 1
+    while True:
+        print(f"\n### Nódulo {numero} ###")
+        avaliar_nodulo()
+
+        if not perguntar_sim_nao("\nDeseja avaliar outro nódulo? (s/n): "):
+            break  # sai do while e encerra o programa
+        numero += 1
+
+    print("\nAté logo!")
 
 
 # Este bloco só roda quando o arquivo é executado diretamente
